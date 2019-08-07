@@ -9,6 +9,8 @@ class RnaTranscription {
                 return "G";
             case "G":
                 return "C";
+            case "T":
+                return "A";
 
         }
 
