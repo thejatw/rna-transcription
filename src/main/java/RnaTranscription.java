@@ -2,21 +2,30 @@ class RnaTranscription {
 
     String transcribe(String dnaStrand) {
         
-        switch(dnaStrand) {
-            case "":
-                return "";
-            case "C":
-                return "G";
-            case "G":
-                return "C";
-            case "T":
-                return "A";
-            case "A":
-                return "U";
+        // storage of resultant transcription
+        String result = "";
 
+        for (int i=0; i<dnaStrand.length(); ++i) {
+
+            switch(dnaStrand.charAt(i)) {
+                case 'C':
+                    result += 'G';
+                    break;
+                case 'G':
+                    result += 'C';
+                    break;
+                case 'T':
+                    result += 'A';
+                    break;
+                case 'A':
+                    result += 'U';
+                    break;
+                default:
+                    result += "";
+            }
         }
 
-        return dnaStrand;
+        return result;
     }
 
 }
